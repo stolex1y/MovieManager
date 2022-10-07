@@ -1,0 +1,22 @@
+/*
+!* rubik-mono-one-regular - latin_cyrillic *!
+@font-face {
+    font-family: 'RubikMonoone-Regular';
+    !*font-style: normal;*!
+    !*font-weight: 400;*!
+    src: local('../fonts/RubikMonoone-Regular.ttf');
+}
+
+!*
+@font-face {
+    font-family: "NunitoSans-Regular";
+    src: local('/fonts/NunitoSans-Regular.ttf');
+}
+*!
+
+.rubik-regular {
+    -fx-font-family: 'RubikMonoone-Regular';
+    -fx-font-size: 20;
+    -fx-font-weight: 400;
+}
+*/

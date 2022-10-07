@@ -1,0 +1,35 @@
+.hyperlink {
+    -fx-text-fill: #292B2F;
+    -fx-padding: 0;
+}
+
+.background {
+    -fx-background-color: white;
+}
+
+.background-image {
+    -fx-background-image: url("/img/background.png");
+}
+
+.film-card .label {
+    -fx-text-fill: #292B2F;
+}
+
+.my-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.my-scroll-pane {
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: never;
+}
+
+.underlined-button {
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #E24F26;
+}
+
+.clickable:hover {
+    -fx-cursor: HAND;
+}

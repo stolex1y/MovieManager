@@ -1,0 +1,23 @@
+.login-input {
+    -fx-prompt-text-fill: #292B2F;
+    -fx-border-color: transparent transparent #292B2F transparent;
+    -fx-font-weight: 400;
+    -fx-background-color: white;
+}
+
+.login-input-prompt {
+    -fx-font-weight: 300;
+}
+
+.sign-button {
+    -fx-background-color: #E24F26;
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: 700;
+}
+
+.label-error {
+    -fx-text-fill: #E24F26;
+    -fx-font-weight: 300;
+}

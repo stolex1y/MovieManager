@@ -1,0 +1,19 @@
+.cancel-button {
+    -fx-background-color: white;
+    -fx-background-radius: 40px;
+    -fx-text-fill: #292B2F;
+    -fx-font-size: 20;
+    -fx-font-weight: 700;
+    -fx-border-width: 3px;
+    -fx-border-radius: 40px;
+    -fx-border-color: #E24F26;
+}
+
+.save-button {
+    -fx-background-color: #E24F26;
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: 700;
+}
+

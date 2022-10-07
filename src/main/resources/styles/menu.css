@@ -1,0 +1,14 @@
+.menu .menu-item:focused {
+    -fx-text-fill: white;
+    -fx-background-color: #E24F26;
+}
+
+.menu .menu-item {
+    -fx-text-fill: #292B2F;
+    -fx-font-size: 18;
+}
+
+.menu .label {
+    -fx-padding: 0 7 0 0;
+}
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import ru.stolexiy.client.ui.view.controls.InputField?>
+<?import ru.stolexiy.client.ui.view.controls.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import ru.stolexiy.client.ui.view.controls.ChoiceEnumBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<VBox styleClass="background" spacing="40.0" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/8">
+    <children>
+        <Label fx:id="labelTitle" alignment="CENTER" contentDisplay="CENTER" textOverrun="CLIP">
+        </Label>
+        <VBox alignment="CENTER" maxWidth="350.0" spacing="10.0">
+            <VBox.margin>
+                <Insets left="60.0" right="60.0"/>
+            </VBox.margin>
+            <children>
+                <InputField fx:id="name" promptText="%film.name"/>
+                <InputField fx:id="productionYear" promptText="%film.productionYear"/>
+                <ChoiceEnumBox styleClass="choice-lang, choice-lang-white" fx:id="country" prefWidth="Infinity"/>
+                <ChoiceEnumBox styleClass="choice-lang, choice-lang-white" fx:id="genre" prefWidth="Infinity"/>
+                <InputField fx:id="director" promptText="%film.director"/>
+                <InputField fx:id="budget" promptText="%film.budget"/>
+                <InputField fx:id="fees" promptText="%film.fees"/>
+                <ChoiceEnumBox styleClass="choice-lang, choice-lang-white" fx:id="mpaaRating" prefWidth="Infinity"/>
+                <InputField fx:id="duration" promptText="%film.durationInMinutes"/>
+                <InputField fx:id="oscarsCount" promptText="%film.oscarsCount"/>
+                <Label fx:id="labelError" wrapText="true" prefWidth="400" styleClass="label-error" prefHeight="50"/>
+                <HBox alignment="CENTER" HBox.hgrow="ALWAYS" spacing="20" prefHeight="57" maxHeight="57">
+                    <children>
+                        <Button fx:id="buttonCancel" styleClass="cancel-button" prefHeight="Infinity" prefWidth="194"
+                                text="%cancel"/>
+                        <Button fx:id="buttonSave" styleClass="save-button" prefHeight="Infinity" prefWidth="185"
+                                text="%save"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets top="40.0" bottom="40.0"/>
+    </padding>
+    <stylesheets>
+        <URL value="@../styles/auth.css"/>
+        <URL value="@../styles/choiceLang.css"/>
+        <URL value="@../styles/dialog.css"/>
+        <URL value="@../styles/main.css"/>
+    </stylesheets>
+</VBox>

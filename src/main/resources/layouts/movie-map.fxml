@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.stolexiy.client.ui.view.MovieMapController">
+   <children>
+      <Label text="Label" textAlignment="CENTER" />
+      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <BubbleChart fx:id="bubbleChart" alternativeRowFillVisible="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+              <xAxis>
+                <NumberAxis autoRanging="false" minorTickVisible="false" side="BOTTOM" tickLength="1.0" tickMarkVisible="false" tickUnit="100.0" upperBound="1920.0" visible="false" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis autoRanging="false" minorTickVisible="false" side="LEFT" tickMarkVisible="false" tickUnit="100.0" upperBound="1000.0" visible="false" />
+              </yAxis>
+            </BubbleChart>
+            <ScatterChart fx:id="scatterChart" alternativeRowFillVisible="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendVisible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: transparent" verticalGridLinesVisible="false" verticalZeroLineVisible="false" visible="false">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" tickLabelsVisible="false" tickMarkVisible="false" visible="false" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis minorTickVisible="false" side="LEFT" tickLabelsVisible="false" tickMarkVisible="false" visible="false" />
+              </yAxis>
+            </ScatterChart>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" strict="true"
+               name="XMLConfigTest" packages="org.apache.logging.log4j.test">
+    <Filter type="ThresholdFilter" level="info"/>
+
+    <Appenders>
+        <RollingFile name="serverFile"
+                     fileName="logs/server.log"
+                     filePattern="logs/$${date:yyyy-MM}/root-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy
+                        size="100 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="clientFile"
+                     fileName="logs/client.log"
+                     filePattern="logs/$${date:yyyy-MM}/client-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy
+                        size="100 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="rootFile"
+                     fileName="logs/root.log"
+                     filePattern="logs/$${date:yyyy-MM}/client-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy
+                        size="100 MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="ServerLogger" level="INFO">
+            <AppenderRef ref="serverFile"/>
+        </Logger>
+        <Logger name="ClientLogger" level="INFO">
+            <AppenderRef ref="clientFile"/>
+        </Logger>
+
+        <Root level="WARN">
+            <AppenderRef ref="rootFile"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>

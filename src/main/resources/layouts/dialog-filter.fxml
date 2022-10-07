@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import ru.stolexiy.client.ui.view.controls.InputField?>
+<?import ru.stolexiy.client.ui.view.controls.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import ru.stolexiy.client.ui.view.controls.ChoiceEnumBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.DatePicker?>
+<VBox styleClass="background" spacing="40.0" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/8">
+    <children>
+        <Label fx:id="labelTitle" alignment="CENTER" contentDisplay="CENTER" textOverrun="CLIP">
+        </Label>
+        <VBox alignment="CENTER" maxWidth="350.0" spacing="10.0">
+            <VBox.margin>
+                <Insets left="60.0" right="60.0"/>
+            </VBox.margin>
+            <children>
+                <ChoiceBox styleClass="choice-lang, choice-lang-white" fx:id="choiceField"/>
+                <StackPane>
+                    <ChoiceEnumBox fx:id="choiceEnum" styleClass="choice-lang, choice-lang-white" prefWidth="Infinity"/>
+                    <InputField fx:id="inputField" maxWidth="Infinity"/>
+                    <DatePicker fx:id="datePicker" maxWidth="Infinity"/>
+                </StackPane>
+                <Label fx:id="labelError" wrapText="true" prefWidth="400" styleClass="label-error" prefHeight="50"/>
+                <HBox alignment="CENTER" HBox.hgrow="ALWAYS" spacing="20" prefHeight="57" maxHeight="57">
+                    <children>
+                        <Button fx:id="buttonCancel" styleClass="cancel-button" prefHeight="Infinity" prefWidth="194"
+                                text="%reset"/>
+                        <Button fx:id="buttonSave" styleClass="save-button" prefHeight="Infinity" prefWidth="185"
+                                text="%apply"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets top="40.0" bottom="40.0"/>
+    </padding>
+    <stylesheets>
+        <URL value="@../styles/auth.css"/>
+        <URL value="@../styles/choiceLang.css"/>
+        <URL value="@../styles/dialog.css"/>
+        <URL value="@../styles/main.css"/>
+    </stylesheets>
+</VBox>

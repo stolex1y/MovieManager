@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import ru.stolexiy.client.ui.view.controls.InputField?>
+<?import javafx.scene.control.TextField?>
+<VBox styleClass="film-card" style="-fx-background-color: white; -fx-background-radius: 40px" alignment="TOP_CENTER"
+      maxHeight="-Infinity" maxWidth="455.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="455.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label alignment="CENTER" wrapText="true" fx:id="title" prefHeight="60" maxHeight="60" textAlignment="CENTER"
+               textOverrun="WORD_ELLIPSIS"/>
+        <ImageView fx:id="poster" fitHeight="375.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/placeholder.png"/>
+            </image>
+        </ImageView>
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+            <children>
+                <StackPane>
+                    <children>
+                        <Label fx:id="filmAbout" text="%film.about" StackPane.alignment="CENTER_LEFT"/>
+                        <HBox alignment="CENTER_RIGHT" spacing="20.0" StackPane.alignment="CENTER_RIGHT">
+                            <children>
+                                <ImageView fx:id="buttonEdit" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true" HBox.hgrow="NEVER">
+                                    <image>
+                                        <Image url="@../img/edit-dis.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="buttonDrop" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true" HBox.hgrow="NEVER">
+                                    <image>
+                                        <Image url="@../img/drop-dis.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </children>
+                </StackPane>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                    <children>
+                        <VBox fx:id="charKeys" VBox.vgrow="ALWAYS" maxHeight="1.7976931348623157E308" spacing="12.0">
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" text="id"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.owner"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.productionYear"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.country"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.genre"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.director"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.budget"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.fees"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.mpaaRating"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.durationInMinutes"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.oscarsCount"/>
+                                <Label maxWidth="1.7976931348623157E308" text="%film.creationDate"/>
+                            </children>
+                        </VBox>
+                        <VBox fx:id="charValues" VBox.vgrow="ALWAYS" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" spacing="12.0">
+                            <children>
+                                <Label fx:id="id" maxWidth="Infinity"/>
+                                <Label fx:id="owner" maxWidth="Infinity"/>
+                                <Label fx:id="productionYear" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="country" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="genre" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="director" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="budget" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="fees" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="mpaaRating" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="durationInMinutes" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="oscarsCount" maxWidth="1.7976931348623157E308"/>
+                                <Label fx:id="creationDate" maxWidth="1.7976931348623157E308"/>
+                            </children>
+                            <padding>
+                                <Insets left="30"/>
+                            </padding>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+    </padding>
+</VBox>

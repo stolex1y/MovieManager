@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import ru.stolexiy.client.ui.view.controls.InputField?>
+
+<?import ru.stolexiy.client.ui.view.controls.ChoiceBox?>
+<?import ru.stolexiy.client.ui.view.controls.ChoiceLangBox?>
+<StackPane fx:controller="ru.stolexiy.client.ui.view.LoginController" minWidth="520.0" prefWidth="520.0"
+           xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox styleClass="background" spacing="60.0" alignment="TOP_CENTER">
+            <children>
+                <Label fx:id="labelTitle" alignment="CENTER" contentDisplay="CENTER" text="%title" textOverrun="CLIP">
+                    <VBox.margin>
+                        <Insets top="80.0"/>
+                    </VBox.margin>
+                </Label>
+                <VBox alignment="CENTER" prefWidth="400.0" spacing="30.0">
+                    <VBox.margin>
+                        <Insets left="60.0" right="60.0"/>
+                    </VBox.margin>
+                    <children>
+                        <InputField fx:id="inputLogin" promptText="%login" password="false"/>
+                        <InputField fx:id="inputPass" promptText="%pass" password="true"/>
+                        <Label fx:id="labelError" wrapText="true" prefWidth="400" styleClass="label-error"
+                               prefHeight="50"/>
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefWidth="100.0" spacing="60.0">
+                    <VBox.margin>
+                        <Insets bottom="60.0" left="100.0" right="100.0"/>
+                    </VBox.margin>
+                    <children>
+                        <Button styleClass="sign-button" fx:id="buttonLogin" maxHeight="57.0" maxWidth="180.0"
+                                minHeight="57.0" mnemonicParsing="false" text="%signin"/>
+                        <Hyperlink fx:id="linkSignin" alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                   text="%signup" textAlignment="CENTER"/>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <ChoiceLangBox fx:id="choiceLang" styleClass="choice-lang, choice-lang-white" prefWidth="150.0"
+                       StackPane.alignment="TOP_RIGHT">
+            <StackPane.margin>
+                <Insets right="10.0" top="10.0"/>
+            </StackPane.margin>
+        </ChoiceLangBox>
+    </children>
+    <stylesheets>
+        <URL value="@../styles/auth.css"/>
+        <URL value="@../styles/choiceLang.css"/>
+        <URL value="@../styles/main.css"/>
+    </stylesheets>
+</StackPane>

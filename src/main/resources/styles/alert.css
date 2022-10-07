@@ -1,0 +1,27 @@
+.alert {
+    -fx-background: white;
+}
+
+.alert-content {
+
+}
+
+/*.alert > .content {
+    -fx-background-color: white;
+}
+
+.alert:header .header-panel, .alert:no-header .header-panel {
+    -fx-background-color: white;
+}
+
+.alert .button-bar {
+    -fx-background-color: white;
+}*/
+
+.alert-button {
+    -fx-background-color: #E24F26;
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: 700;
+}

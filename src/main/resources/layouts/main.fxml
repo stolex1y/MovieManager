@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import ru.stolexiy.client.ui.view.controls.ChoiceBox?>
+<?import java.net.URL?>
+<?import ru.stolexiy.client.ui.view.controls.ChoiceLangBox?>
+<VBox styleClass="background-image" fx:controller="ru.stolexiy.client.ui.view.MainController"
+      maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane maxHeight="25.0" maxWidth="1.7976931348623157E308">
+         <children>
+            <Label fx:id="labelTitle" text="%title" StackPane.alignment="CENTER_LEFT"/>
+            <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" spacing="15.0">
+               <children>
+                  <ChoiceLangBox styleClass="choice-lang, choice-lang-transparent" fx:id="choiceLang"
+                                 prefWidth="150.0"/>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true"
+                             HBox.hgrow="NEVER">
+                     <image>
+                        <Image url="@../img/user.png"/>
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelLogin" maxHeight="1.7976931348623157E308"/>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="44.0" left="20.0" right="20.0" top="30.0"/>
+         </padding>
+      </StackPane>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="vboxMenu" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity"
+                  prefWidth="475.0" spacing="20.0">
+               <children>
+                  <MenuButton styleClass="menu, clickable" fx:id="menuCollection" mnemonicParsing="false"
+                              text="%command.collection">
+                     <items>
+                        <MenuItem fx:id="menuItemDirectorAsc" mnemonicParsing="false"
+                                  text="%command.collection.director.asc"/>
+                        <MenuItem fx:id="menuItemDropLowerId" mnemonicParsing="false"
+                                  text="%command.collection.drop.lower.id"/>
+                        <MenuItem fx:id="menuItemClear" mnemonicParsing="false" text="%command.collection.clear"/>
+                     </items>
+                  </MenuButton>
+                  <MenuButton styleClass="menu, clickable" fx:id="menuStatistic" mnemonicParsing="false"
+                              text="%command.statistic">
+                     <items>
+                        <MenuItem fx:id="menuItemOscarsAvg" mnemonicParsing="false"
+                                  text="%command.statistic.oscars.avg"/>
+                        <MenuItem fx:id="menuItemBudgetSum" mnemonicParsing="false"
+                                  text="%command.statistic.budget.sum"/>
+                        <MenuItem fx:id="menuItemCountFilmCountry" mnemonicParsing="false"
+                                  text="%command.statistic.count.film.country"/>
+                        <MenuItem fx:id="menuItemCountFilmYear" mnemonicParsing="false"
+                                  text="%command.statistic.count.film.productionYear"/>
+                        <MenuItem fx:id="menuItemCountBudgetLess" mnemonicParsing="false"
+                                  text="%command.statistic.count.budget.less"/>
+                        <MenuItem fx:id="menuItemInfo" mnemonicParsing="false" text="%command.info.collection"/>
+                     </items>
+                  </MenuButton>
+                  <Hyperlink visible="false" styleClass="hyperlink" fx:id="linkFilmsMap" text="%films.map"/>
+               </children>
+            </VBox>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="40.0"
+                  HBox.hgrow="ALWAYS">
+               <children>
+                  <StackPane maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxWidth="700" StackPane.alignment="CENTER_LEFT" maxHeight="20.0"
+                              spacing="35.0" HBox.hgrow="NEVER">
+                           <children>
+                              <Button fx:id="buttonFilmsAll" styleClass="clickable" mnemonicParsing="false"
+                                      text="%films.all"/>
+                              <Button fx:id="buttonFilmsUser" styleClass="clickable" mnemonicParsing="false"
+                                      text="%films.my"/>
+                              <HBox spacing="15" maxHeight="20.0" alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="buttonPrevPage" fitHeight="20.0" fitWidth="20.0"
+                                               pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/prev-dis.png"/>
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="labelPage"/>
+                                    <ImageView fx:id="buttonNextPage" fitHeight="20.0" fitWidth="20.0"
+                                               pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/next-dis.png"/>
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" maxWidth="700" prefHeight="25.0" spacing="25.0"
+                              StackPane.alignment="CENTER_RIGHT" HBox.hgrow="NEVER">
+                           <children>
+                              <ImageView fx:id="buttonAddMovie" styleClass="clickable" fitHeight="25.0" fitWidth="25.0"
+                                         pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                 <Image url="@../img/add.png"/>
+                              </ImageView>
+                              <ImageView fx:id="buttonSort" styleClass="clickable" fitHeight="25.0" fitWidth="25.0"
+                                         pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                 <Image url="@../img/sort.png"/>
+                              </ImageView>
+                              <ImageView fx:id="buttonFilter" styleClass="clickable" fitHeight="25.0" fitWidth="25.0"
+                                         pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                 <Image url="@../img/filter-dis.png"/>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <ScrollPane fx:id="scrollPane" styleClass="my-scroll-pane" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                     <content>
+                        <GridPane fx:id="films" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                           </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0"/>
+         </padding>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/choiceLang.css"/>
+      <URL value="@../styles/main.css"/>
+      <URL value="@../styles/menu.css"/>
+   </stylesheets>
+</VBox>
